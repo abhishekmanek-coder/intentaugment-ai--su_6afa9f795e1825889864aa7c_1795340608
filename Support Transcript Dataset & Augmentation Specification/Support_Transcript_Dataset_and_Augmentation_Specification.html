@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>Deliverable 1 - Specification</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 900px; margin: 40px auto; padding: 0 20px; color: #1f2937; }
+h1, h2, h3 { color: #111827; }
+h1 { border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; }
+h2 { border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 30px; }
+table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+th, td { border: 1px solid #d1d5db; padding: 8px 12px; text-align: left; }
+th { background-color: #f3f4f6; font-weight: 600; }
+tr:nth-child(even) { background-color: #f9fafb; }
+code { background: #f3f4f6; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+pre { background: #1e293b; color: #f8fafc; padding: 16px; border-radius: 8px; overflow-x: auto; }
+pre code { background: transparent; color: inherit; }
+</style>
+</head>
+<body>
+<h1>Support Transcript Dataset &amp; Augmentation Specification</h1>
+<p><strong>Project:</strong> IntentAugment AI: Support Transcript Augmenter<br />
+<strong>Deliverable:</strong> #1 (Week 1 Milestone)<br />
+<strong>Author:</strong> Abhishek Manek<br />
+<strong>Repository:</strong> <code>abhishekmanek-coder/intentaugment-ai--su_6afa9f795e1825889864aa7c_1795340608</code><br />
+<strong>Evaluation Weight:</strong> 10% (Support Transcript Dataset Analysis &amp; Requirements)</p>
+<hr />
+<h2>1. Executive Summary &amp; Problem Formulation</h2>
+<h3>1.1 Problem Statement</h3>
+<p>Customer support intent classification is a foundational task in automated conversational AI. However, real-world customer support channels (live web chat, mobile messaging, email, and automated speech-to-text transcripts) exhibit severe distributional divergence from static training datasets. While reference training sets are typically curated with grammatical, fluent, and well-punctuated English, real customer interactions are characterized by:</p>
+<ul>
+<li>Severe typing errors (QWERTY adjacent-key typos, transpositions, character omissions).</li>
+<li>Grammatical compression (fragmented sentences, lack of capitalization and punctuation).</li>
+<li>Speech-to-text (STT) acoustic errors (homophone misspellings, phonetic slips, run-on phrases).</li>
+<li>Highly colloquial or emotionally charged phrasing (informal chat vernacular, urgency, frustration).</li>
+</ul>
+<p>Standard intent classification models trained on narrow, static corpora degrade significantly when confronted with these noisy, real-world customer variants.</p>
+<h3>1.2 The IntentAugment AI Objective</h3>
+<p><strong>IntentAugment AI</strong> is an automated, controlled natural language processing (NLP) augmentation framework designed to systematically expand support transcript training data while strictly safeguarding semantic integrity and intent label consistency.</p>
+<p>By combining transformer-based contextual paraphrasing with realistic phonetic, typographical, and linguistic noise models, IntentAugment AI synthesizes robust, heterogeneous customer expressions that expand model decision boundaries and improve downstream intent classification robustness.</p>
+<hr />
+<h2>2. Baseline Dataset Analysis &amp; Characterization</h2>
+<h3>2.1 Dataset Composition</h3>
+<p>The baseline dataset (<code>raw_customer_support_transcripts.csv</code>) contains <strong>200 verified customer support transcripts</strong> systematically spanning <strong>8 core business intent categories</strong>:</p>
+<p>| Intent Label | Domain Description | Sample Count | % Distribution |
+| :--- | :--- | :---: | :---: |
+| <code>refund_request</code> | Reimbursement, return credits, overcharge claims | 25 | 12.5% |
+| <code>cancel_order</code> | Order revocation, dispatch abort, voiding pre-orders | 25 | 12.5% |
+| <code>track_shipping</code> | Courier tracking, transit delays, package delivery status | 25 | 12.5% |
+| <code>payment_issue</code> | Card declines, double billing, OTP timeouts, invoice errors | 25 | 12.5% |
+| <code>account_recovery</code> | Password reset, 2FA lockout, unauthorized access, suspended account | 25 | 12.5% |
+| <code>technical_support</code> | System crashes, API errors, 500 status codes, device incompatibilities | 25 | 12.5% |
+| <code>subscription_management</code> | Plan upgrades/downgrades, auto-renewal cessation, seat licensing | 25 | 12.5% |
+| <code>product_inquiry</code> | Specifications, hardware dimensions, compatibility, inventory | 25 | 12.5% |
+| <strong>Total</strong> | <strong>8 Primary Business Verticals</strong> | <strong>200</strong> | <strong>100.0%</strong> |</p>
+<p>The baseline maintains a strictly balanced prior distribution across classes, providing an unskewed foundation for controlled data augmentation.</p>
+<h3>2.2 Lexical &amp; Structural Metrics</h3>
+<p>Computed via automated lexical analysis (<code>dataset_analysis.py</code>):</p>
+<ul>
+<li><strong>Total Utterances:</strong> 200</li>
+<li><strong>Total Word Tokens:</strong> 2,428</li>
+<li><strong>Unique Vocabulary Size:</strong> 774 words</li>
+<li><strong>Lexical Diversity (Type-Token Ratio - TTR):</strong> 0.3188 (healthy lexical variance without vocabulary saturation)</li>
+<li><strong>Mean Words per Utterance:</strong> 12.14 words (Standard Deviation = 4.38 words)</li>
+<li><strong>Word Length Range:</strong> [5 to 26 words]</li>
+<li><strong>Mean Characters per Utterance:</strong> 71.60 characters</li>
+</ul>
+<h3>2.3 Modality &amp; Channel Breakdown</h3>
+<p>Transcripts are gathered across three primary communication channels:</p>
+<ul>
+<li><strong>Live Chat (54%):</strong> Characterized by short conversational turns, lower-case text, and rapid typing errors.</li>
+<li><strong>Email Support (28%):</strong> Characterized by formal sentence structure, salutations, invoice numbers, and detailed explanations.</li>
+<li><strong>Voice Speech-to-Text (18%):</strong> Characterized by run-on sentences, lack of casing/punctuation, and acoustic phonetic variations.</li>
+</ul>
+<hr />
+<h2>3. Customer Phrasing &amp; Noise Assessment (Error Taxonomy)</h2>
+<p>Through systematic examination of customer chat logs, four dominant classes of linguistic perturbation have been identified and formalized into our noise taxonomy:</p>
+<h3>3.1 Typographical &amp; Mechanical Noise (QWERTY Keyboard Distance)</h3>
+<ul>
+<li><strong>Mechanism:</strong> Customers typing rapidly on mobile virtual keyboards or physical keyboards strike adjacent keys.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li><em>&quot;cancel&quot;</em> -&gt; <em>&quot;cancell&quot;</em>, <em>&quot;cancle&quot;</em>, <em>&quot;canvel&quot;</em> (<code>v</code> is adjacent to <code>c</code>).</li>
+<li><em>&quot;order&quot;</em> -&gt; <em>&quot;ordrr&quot;</em>, <em>&quot;irder&quot;</em> (<code>i</code> is adjacent to <code>o</code>).</li>
+</ul>
+</li>
+<li><strong>Target Implementation:</strong> <code>nlpaug.augmenter.char.KeyboardAug</code> with calibrated keyboard distance matrices.</li>
+</ul>
+<h3>3.2 Phonetic &amp; Acoustic Transcription Artifacts</h3>
+<ul>
+<li><strong>Mechanism:</strong> Customers dictating via voice assistants or human transcription operators mishearing unstressed syllables or homophones.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li><em>&quot;their&quot;</em> &lt;-&gt; <em>&quot;there&quot;</em>, <em>&quot;too&quot;</em> &lt;-&gt; <em>&quot;two&quot;</em>, <em>&quot;won&quot;</em> &lt;-&gt; <em>&quot;one&quot;</em>.</li>
+<li>Contracted phonetic spellings: <em>&quot;wuz&quot;</em> for <em>&quot;was&quot;</em>, <em>&quot;plz&quot;</em> for <em>&quot;please&quot;</em>, <em>&quot;gonna&quot;</em> for <em>&quot;going to&quot;</em>.</li>
+</ul>
+</li>
+<li><strong>Target Implementation:</strong> Phonetic string perturbation and OCR/spelling distance noise (<code>nlpaug.augmenter.char.OcrAug</code>).</li>
+</ul>
+<h3>3.3 Syntactic &amp; Grammatical Compression</h3>
+<ul>
+<li><strong>Mechanism:</strong> Chat-native users compress grammar by dropping subject pronouns, auxiliary verbs, or prepositions.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li>Reference: <em>&quot;I would like to cancel my order before it ships.&quot;</em></li>
+<li>Compressed: <em>&quot;cancel order asap before shipping&quot;</em>.</li>
+<li>Inverted Question: <em>&quot;Why is shipping delayed?&quot;</em> &lt;-&gt; <em>&quot;any reason why the package isn't here yet?&quot;</em>.</li>
+</ul>
+</li>
+<li><strong>Target Implementation:</strong> <code>spaCy</code> dependency tree perturbation (auxiliary verb pruning, passive/active voice inversion).</li>
+</ul>
+<h3>3.4 Contextual Synonymy &amp; Paraphrasing</h3>
+<ul>
+<li><strong>Mechanism:</strong> Different customers express identical business intents using completely disjoint vocabularies.</li>
+<li><strong>Examples:</strong>
+<ul>
+<li><code>refund_request</code>: <em>&quot;money back&quot;</em> &lt;-&gt; <em>&quot;reimbursement&quot;</em> &lt;-&gt; <em>&quot;credit funds back&quot;</em> &lt;-&gt; <em>&quot;reverse transaction&quot;</em>.</li>
+<li><code>cancel_order</code>: <em>&quot;terminate order&quot;</em> &lt;-&gt; <em>&quot;abort shipment&quot;</em> &lt;-&gt; <em>&quot;void purchase&quot;</em> &lt;-&gt; <em>&quot;revoke transaction&quot;</em>.</li>
+</ul>
+</li>
+<li><strong>Target Implementation:</strong> Sequence-to-sequence transformer paraphrasers (<code>Vamsi/T5_Paraphrase_Paws</code>, <code>google/flan-t5-base</code>) operating under controlled beam search.</li>
+</ul>
+<hr />
+<h2>4. Augmentation Requirements &amp; Quality Constraints</h2>
+<p>To prevent model corruption and ensure high-fidelity downstream training, the IntentAugment AI pipeline establishes strict boundaries:</p>
+<pre><code class="language-mermaid">flowchart TD
+    Raw[&quot;Raw Support Transcript&quot;] --&gt; AugChoice[&quot;Augmentation Strategy Engine&quot;]
+    AugChoice --&gt;|Branch 1| HF[&quot;Hugging Face Transformer (Contextual Paraphraser)&quot;]
+    AugChoice --&gt;|Branch 2| NLPAug[&quot;NLPAug Engine (Keyboard, Typo, OCR Noise)&quot;]
+    AugChoice --&gt;|Branch 3| SpaCy[&quot;spaCy Linguistic Engine (Synonym &amp; Syntax Modulation)&quot;]
+    
+    HF --&gt; Merge[&quot;Augmented Candidate Variant&quot;]
+    NLPAug --&gt; Merge
+    SpaCy --&gt; Merge
+    
+    Merge --&gt; ValFilter[&quot;Quality &amp; Intent Preservation Gate&quot;]
+    ValFilter --&gt;|Cosine Similarity: 0.80 - 0.98| Accepted[&quot;Accepted Validated Variant (Preserves Ground-Truth Intent)&quot;]
+    ValFilter --&gt;|Cosine Similarity &lt; 0.80| Rejected[&quot;Discarded (Semantic Drift)&quot;]
+    ValFilter --&gt;|Cosine Similarity &gt; 0.98| RejectedIdent[&quot;Discarded (Trivial Identity Transformation)&quot;]
+</code></pre>
+<h3>4.1 Specification Constraints Table</h3>
+<p>| Dimension | Specification Constraint | Justification |
+| :--- | :--- | :--- |
+| <strong>Expansion Factor (k)</strong> | 4x (4 synthetic variants per raw sample) | Multiplies 200 raw samples into 1,000 balanced instances without overfitting. |
+| <strong>Noise Budget (alpha)</strong> | Max 12% of characters or 15% of words | Prevents transcripts from becoming illegible gibberish. |
+| <strong>Semantic Similarity Floor</strong> | Cosine Similarity &gt;= 0.80 | Guards against intent drift (e.g. turning a cancellation into an order status query). |
+| <strong>Trivial Identity Ceiling</strong> | Cosine Similarity &lt;= 0.98 | Discards trivial identity transformations that add zero lexical diversity. |
+| <strong>Class Label Preservation</strong> | Ground-truth intent remains strictly invariant | Ensures supervised training labels remain 100% consistent. |</p>
+<hr />
+<h2>5. NLP Environment Setup &amp; Toolchain</h2>
+<p>The pipeline utilizes the following state-of-the-art NLP stack:</p>
+<pre><code class="language-plaintext">Python 3.10+ / 3.14 Environment
++-- transformers (Hugging Face)      --&gt; Contextual Paraphrase generation (T5 / Pegasus)
++-- torch (PyTorch)                  --&gt; Deep learning tensor execution engine
++-- nlpaug                           --&gt; Character and keyboard typographical noise injection
++-- spacy (en_core_web_sm)           --&gt; POS-tagging, lemmatization, and syntactic filtering
++-- sentence-transformers           --&gt; Dense embeddings (all-MiniLM-L6-v2) for intent validation
++-- pandas &amp; numpy                   --&gt; Tabular data manipulation and matrix operations
++-- scikit-learn                     --&gt; Downstream intent classification benchmarking
+</code></pre>
+<h3>Reproducibility Configuration</h3>
+<p>All random transforms, token perturbation rates, and beam search parameters are managed via a centralized YAML configuration (<code>configs/augmentation_config.yaml</code>) with deterministic random seeds (<code>seed=42</code>).</p>
+<hr />
+<h2>6. Initial Pipeline Architecture Design</h2>
+<p>The modular architecture for <strong>Deliverable #2</strong> is partitioned into four decoupled Python modules:</p>
+<ol>
+<li><strong><code>src/dataset_loader.py</code></strong>: Ingests, normalizes, and validates raw support transcripts from CSV/JSON.</li>
+<li><strong><code>src/paraphraser.py</code></strong>: Contextual paraphrasing module wrapping Hugging Face sequence-to-sequence pipelines.</li>
+<li><strong><code>src/noise_generator.py</code></strong>: Typo and acoustic noise synthesis wrapping NLPAug char and keyboard augmenters.</li>
+<li><strong><code>src/validator.py</code></strong>: Embeds pairs via Sentence-Transformers and executes cosine similarity thresholding.</li>
+<li><strong><code>src/pipeline.py</code></strong>: Unified orchestrator providing batch execution, progress telemetry, and structured metadata output.</li>
+</ol>
+<hr />
+<h2>7. Downstream Validation &amp; Evaluation Plan</h2>
+<p>To empirically validate the efficacy of IntentAugment AI in Weeks 3 and 4:</p>
+<ol>
+<li><strong>Baseline Model:</strong> Train an intent classifier (TF-IDF + LinearSVC / LogisticRegression and DistilBERT) strictly on the raw 200 utterances.</li>
+<li><strong>Augmented Model:</strong> Train the identical model architecture on the expanded 1,000+ utterance augmented dataset.</li>
+<li><strong>Robustness Stress Test:</strong> Evaluate both models against an out-of-distribution test set containing real customer typos and noisy phone transcripts.</li>
+<li><strong>Target Metric:</strong> Demonstrate a &gt;= 5-10% improvement in F1-score and accuracy on noisy customer queries.</li>
+</ol>
+<hr />
+<h2>8. Verification Checklist for Deliverable #1</h2>
+<ul>
+<li>[x] Raw support transcript dataset prepared with 8 balanced intent classes (<code>raw_customer_support_transcripts.csv</code>).</li>
+<li>[x] Automated exploratory data analysis script implemented (<code>dataset_analysis.py</code>).</li>
+<li>[x] Lexical, structural, and channel metrics computed (<code>dataset_eda_summary.json</code>).</li>
+<li>[x] Comprehensive customer phrasing and error taxonomy documented.</li>
+<li>[x] Augmentation constraints and semantic similarity validation thresholds defined.</li>
+<li>[x] Complete NLP pipeline architecture specified with Mermaid diagrams and module contracts.</li>
+</ul>
+
+</body>
+</html>
