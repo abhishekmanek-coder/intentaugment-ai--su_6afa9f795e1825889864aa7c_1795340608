@@ -1,0 +1,113 @@
+# ============================================================================
+# IntentAugment AI - Augmentation Pipeline Configuration
+# ============================================================================
+# This YAML configuration manages all parameters for the transcript
+# augmentation pipeline, ensuring reproducibility and easy tuning.
+# ============================================================================
+
+# Global settings
+global:
+  random_seed: 42
+  num_variants_per_sample: 4          # Number of augmented variants per original transcript
+  output_format: "csv"                # Output format: csv, json, parquet
+  log_level: "INFO"
+
+# Dataset loader configuration
+dataset:
+  input_path: "../Support Transcript Dataset & Augmentation Specification/raw_customer_support_transcripts.csv"
+  text_column: "customer_utterance"
+  label_column: "intent"
+  id_column: "transcript_id"
+  encoding: "utf-8"
+
+# Paraphraser configuration (Hugging Face Transformers)
+paraphraser:
+  enabled: true
+  model_name: "Vamsi/T5_Paraphrase_Paws"       # T5-based paraphrase model
+  fallback_model: "google/flan-t5-small"         # Lightweight fallback
+  max_input_length: 128                           # Max tokens for input
+  max_output_length: 128                          # Max tokens for output
+  num_return_sequences: 3                         # Number of paraphrases to generate per input
+  num_beams: 5                                    # Beam search width
+  temperature: 1.5                                # Sampling temperature (higher = more diverse)
+  top_p: 0.92                                     # Nucleus sampling threshold
+  top_k: 50                                       # Top-k sampling
+  do_sample: true                                 # Enable sampling (vs greedy decoding)
+  repetition_penalty: 2.5                         # Penalize repetitive outputs
+  length_penalty: 1.0                             # Length normalization
+  diversity_penalty: 0.0                          # Diverse beam search penalty
+  device: "auto"                                  # auto, cpu, cuda, mps
+
+# Noise generator configuration (NLPAug + spaCy)
+noise_generator:
+  enabled: true
+  
+  # Keyboard typo augmentation (QWERTY adjacent-key errors)
+  keyboard_noise:
+    enabled: true
+    aug_char_p: 0.08                # Probability of augmenting each character
+    aug_word_p: 0.15                # Probability of selecting a word for augmentation
+    aug_char_min: 1                 # Minimum characters to augment per word
+    aug_char_max: 2                 # Maximum characters to augment per word
+    include_special_char: false     # Include special characters in augmentation
+    include_numeric: false          # Include numeric characters
+    include_upper_case: false       # Include uppercase variations
+    min_char: 3                     # Minimum word length to apply keyboard noise
+    
+  # OCR / spelling noise augmentation
+  ocr_noise:
+    enabled: true
+    aug_char_p: 0.06                # Probability of OCR-style character replacement
+    aug_word_p: 0.12                # Probability of selecting a word
+    min_char: 3                     # Minimum word length to apply OCR noise
+    
+  # Character-level noise (random insert, swap, delete)
+  char_noise:
+    enabled: true
+    aug_type: "random"              # random, insert, swap, delete, substitute
+    aug_char_p: 0.05                # Probability per character
+    aug_word_p: 0.10                # Probability per word
+    min_char: 3                     # Minimum word length
+    
+  # spaCy linguistic noise (synonym substitution)
+  linguistic_noise:
+    enabled: true
+    spacy_model: "en_core_web_sm"   # spaCy language model
+    synonym_p: 0.15                 # Probability of replacing a word with synonym
+    pos_tags_to_augment:            # Only augment these POS tags
+      - "NOUN"
+      - "VERB"
+      - "ADJ"
+      - "ADV"
+    contraction_expansion: true     # Expand/contract (e.g., can't <-> cannot)
+    case_variation: true            # Randomly change casing
+
+# Semantic validation configuration (Sentence-Transformers)
+validator:
+  enabled: true
+  model_name: "all-MiniLM-L6-v2"   # Sentence embedding model
+  similarity_floor: 0.80            # Minimum cosine similarity to accept
+  similarity_ceiling: 0.98          # Maximum similarity (reject trivial copies)
+  batch_size: 32                    # Embedding batch size
+
+# Noise budget constraints
+constraints:
+  max_char_perturbation_rate: 0.12  # Max 12% of characters can change
+  max_word_perturbation_rate: 0.15  # Max 15% of words can change
+  preserve_named_entities: true     # Do not modify detected named entities
+  preserve_numbers: true            # Do not modify numerical values
+  min_output_length: 3              # Minimum words in augmented output
+
+# Pipeline execution settings
+pipeline:
+  augmentation_strategies:          # Which strategies to apply
+    - "paraphrase"
+    - "keyboard_noise"
+    - "ocr_noise"
+    - "char_noise"
+    - "linguistic_noise"
+    - "combined"                    # Paraphrase + noise together
+  batch_size: 16                    # Processing batch size
+  show_progress: true               # Display progress bar
+  save_intermediate: false          # Save intermediate results
+  metadata_tracking: true           # Track augmentation metadata per sample
