@@ -1,0 +1,546 @@
+sample_id,utterance,intent,is_augmented
+TR_017,my refund status is showing pending for over 10 business days now,refund_request,False
+TR_013,"The course content was completely outdated, expecting a total refund under your 30-day guarantee.",refund_request,False
+TR_010,"refund plz, bought wrong item by mistake 10 mins ago",refund_request,False
+TR_020,Please reimburse the return shipping fee as well since the fault was on your warehouse.,refund_request,False
+TR_019,"I was overcharged on my monthly bill by $45, need that refunded right away.",refund_request,False
+TR_007,You guys sent me the wrong color jacket. Give me my money back please.,refund_request,False
+TR_006,how do i claim a refund for defective electronics item?,refund_request,False
+TR_011,I am writing to formally request a reimbursement for invoice #INV-7731.,refund_request,False
+TR_016,"The flight was cancelled by the airline, please issue an immediate refund.",refund_request,False
+TR_022,"i did not authorize this charge, refund immediately or i will dispute with bank",refund_request,False
+TR_012,Can you credit the funds back to my original payment card?,refund_request,False
+TR_018,can i get partial refund if i keep one item from the bundle?,refund_request,False
+TR_002,"Hey, can i get my money back? The shoes arrived damaged and don't fit at all.",refund_request,False
+TR_015,"money back please, item never arrived and seller is not responding",refund_request,False
+TR_023,"Representative told me yesterday I would get a refund, checking on confirmation number.",refund_request,False
+TR_014,"hey agent, how long does a refund usually take to reflect on Visa?",refund_request,False
+TR_003,need a refund asap charged twice for the same hoodie,refund_request,False
+TR_028,Please stop the shipment for order 44102 and cancel it immediately.,cancel_order,False
+TR_038,Kindly discard order #8841 as I no longer require the items.,cancel_order,False
+TR_037,"need to void order 11029, my child pressed order button without permission",cancel_order,False
+TR_033,"Please do not dispatch the package, I wish to terminate this purchase order.",cancel_order,False
+TR_050,Please drop order #12398 from my queue.,cancel_order,False
+TR_029,"I want to revoke my order, I found a cheaper alternative elsewhere.",cancel_order,False
+TR_035,"cancel my order immediately, taking way too long to prepare",cancel_order,False
+TR_048,"cancel this item right now, do not send it to my office",cancel_order,False
+TR_043,"Cancel my order please, delivery estimate changed from 2 days to 3 weeks.",cancel_order,False
+TR_041,Please confirm that order #65219 has been successfully cancelled.,cancel_order,False
+TR_047,I would appreciate if you could halt and cancel my pending transaction #8172.,cancel_order,False
+TR_046,"emergency cancel order 50123, card was compromised",cancel_order,False
+TR_042,i want to cancel one specific item from my basket order without cancelling everything,cancel_order,False
+TR_040,Why can't I click the cancel button on my order details page?,cancel_order,False
+TR_027,can u pls cancel my order placed 5 mins ago? ordered wrong address,cancel_order,False
+TR_045,"terminate order 491823, bought it in a physical store instead",cancel_order,False
+TR_032,How can I abort the order I submitted this morning?,cancel_order,False
+TR_073,Why does tracking say 'Address Incomplete' when I entered full street details?,track_shipping,False
+TR_051,Where is my parcel? The tracking number says delivered but I received nothing.,track_shipping,False
+TR_059,I haven't received any shipping dispatch notification for order placed 6 days ago.,track_shipping,False
+TR_074,how many days for standard shipping to Seattle area?,track_shipping,False
+TR_061,Tracking says delivered to front porch but my CCTV footage shows no courier arrived.,track_shipping,False
+TR_075,"Tracking status changed to 'Returned to Sender', why was this not delivered?",track_shipping,False
+TR_056,package is stuck in Memphis transit hub for four consecutive days,track_shipping,False
+TR_066,Any news on why shipment 77123 has an exception alert?,track_shipping,False
+TR_064,"package delivery rescheduled without notifying me, what is going on?",track_shipping,False
+TR_072,"track order 88291, urgently need it before tomorrow morning flight",track_shipping,False
+TR_065,can i reroute the package to a local pickup point locker?,track_shipping,False
+TR_054,The tracking link provided in the confirmation email leads to a 404 page.,track_shipping,False
+TR_067,"delivery boy called and disconnected, where can i track his location?",track_shipping,False
+TR_055,Could you check the current courier status for shipment #SHP-9182?,track_shipping,False
+TR_063,customs clearance status update for international package #INTL-88219,track_shipping,False
+TR_058,where is order #4491? says out for delivery since 8am,track_shipping,False
+TR_052,Can you give me an update on tracking number FedEx 99281726?,track_shipping,False
+TR_088,gift card balance shows $50 but checkout says invalid voucher code,payment_issue,False
+TR_087,How do I update my expired Mastercard on file for upcoming automatic renewal?,payment_issue,False
+TR_089,payment gateway is throwing a 502 bad gateway error on the submit page,payment_issue,False
+TR_085,money was deducted from my account but order status says unpaid / pending payment,payment_issue,False
+TR_095,"Checkout says 'Transaction Not Permitted By Issuer', what should I do?",payment_issue,False
+TR_090,Can I wire transfer via ACH directly to pay this commercial invoice?,payment_issue,False
+TR_077,I was charged twice on my American Express card for a single checkout transaction.,payment_issue,False
+TR_076,My credit card was declined at checkout even though I have sufficient balance.,payment_issue,False
+TR_091,system keeps rejecting my European debit card with 3D Secure verification,payment_issue,False
+TR_079,Do you accept PayPal or Apple Pay for recurring subscriptions?,payment_issue,False
+TR_099,chargeback warning: resolve duplicate debit within 24 hours please,payment_issue,False
+TR_086,Why did your platform charge a foreign exchange conversion fee?,payment_issue,False
+TR_080,The promotion discount coupon code is not applying to the final checkout total.,payment_issue,False
+TR_082,My bank sent an OTP SMS but the checkout screen timed out before I could submit it.,payment_issue,False
+TR_092,Why is sales tax being charged on a tax-exempt non-profit purchase?,payment_issue,False
+TR_094,Can I change my default billing payment method without canceling active orders?,payment_issue,False
+TR_083,can i split payment across two different debit cards?,payment_issue,False
+TR_110,login page loops back to login without any error message displayed,account_recovery,False
+TR_108,Need to change my primary login email address from my university email to personal.,account_recovery,False
+TR_101,I forgot my account password and the reset link email never arrives in my inbox.,account_recovery,False
+TR_114,"forgot username associated with my order, only have my credit card number",account_recovery,False
+TR_106,can you unlock my profile please username is john_doe99,account_recovery,False
+TR_102,"My account is locked due to too many failed login attempts, please unlock.",account_recovery,False
+TR_118,Please unlink my old Google SSO account and let me set an email and password.,account_recovery,False
+TR_122,"Help me restore access to my account, all my project files and receipts are in there.",account_recovery,False
+TR_121,Can you resend the account activation confirmation email?,account_recovery,False
+TR_117,captcha on the login screen is broken and fails every single attempt,account_recovery,False
+TR_124,"I have two duplicate accounts registered under slightly different emails, can you merge them?",account_recovery,False
+TR_120,account blocked message appears every time i connect via home VPN,account_recovery,False
+TR_112,Can an administrator manually reset my password and send temporary credentials?,account_recovery,False
+TR_104,How do I regain access to my account if I lost my two-factor authenticator backup codes?,account_recovery,False
+TR_103,cannot login 2fa code sent to old phone number that i no longer possess,account_recovery,False
+TR_109,How can I verify my identity to restore access to my deactivated enterprise account?,account_recovery,False
+TR_105,"I suspect my profile was hacked, someone changed my registered email without my consent.",account_recovery,False
+TR_150,"Server response latency exceeded 15000ms on production endpoints, please investigate.",technical_support,False
+TR_133,The latest software patch broke compatibility with our external USB barcode scanner.,technical_support,False
+TR_135,API webhook calls are failing with SSL handshake timeout errors since this morning.,technical_support,False
+TR_137,Search bar autocomplete filter is unresponsive and does not show any dropdown results.,technical_support,False
+TR_144,Is there a workaround for the camera permission denial bug on macOS Sonoma?,technical_support,False
+TR_147,Real-time collaboration changes are overwriting coworker edits without warning.,technical_support,False
+TR_132,Push notifications are not coming through on my iPhone even with permissions enabled.,technical_support,False
+TR_148,"software won't install, throws missing Visual C++ redistributable dependency error",technical_support,False
+TR_142,Audio output is crackling through Bluetooth headphones during conference calls.,technical_support,False
+TR_127,Desktop desktop client keeps freezing during audio export rendering on Windows 11.,technical_support,False
+TR_136,How do I generate and export debug diagnostic log files for your engineering team?,technical_support,False
+TR_126,The web dashboard crashes with a JavaScript error whenever I open the analytics tab.,technical_support,False
+TR_141,Database connection pool exhausted error message during peak morning traffic.,technical_support,False
+TR_149,Keyboard shortcuts like Ctrl+Z and Ctrl+S stopped responding in the latest web build.,technical_support,False
+TR_134,screen goes completely blank white when clicking the checkout button in Safari,technical_support,False
+TR_140,dark mode toggle flickers violently and causes high GPU utilization in Chrome browser,technical_support,False
+TR_143,drag and drop file upload component is not working on Firefox 120,technical_support,False
+TR_166,"cancel my subscription right now, your service quality has degraded significantly",subscription_management,False
+TR_155,How many team seats are currently included in our business subscription license?,subscription_management,False
+TR_152,How do I upgrade our team account from the Basic plan to the Enterprise tier?,subscription_management,False
+TR_162,Is there a student or non-profit discount available on the annual individual tier?,subscription_management,False
+TR_158,"downgrade my plan to free tier immediately, no longer using the advanced features",subscription_management,False
+TR_169,My subscription shows 'past due' status even though my bank confirms payment went through.,subscription_management,False
+TR_168,how do i turn off automatic recurring billing on the mobile app?,subscription_management,False
+TR_164,Can I remove 3 unused member seats from our active monthly recurring plan?,subscription_management,False
+TR_173,"stop charging my credit card every month, I haven't logged in for 6 months",subscription_management,False
+TR_161,want to reactivate my previously canceled premium plan with my saved settings,subscription_management,False
+TR_172,Is there any early termination fee for canceling our 1-year contract early?,subscription_management,False
+TR_174,how do i add extra storage add-on to our existing cloud plan?,subscription_management,False
+TR_163,free trial ended without notification and charged my credit card full year fee,subscription_management,False
+TR_170,Will I get prorated credit if I upgrade in the middle of our billing cycle?,subscription_management,False
+TR_153,"pls stop auto renew for my annual membership, do not want to be charged next month",subscription_management,False
+TR_157,Can I pause my fitness membership subscription for 2 months while I am traveling abroad?,subscription_management,False
+TR_160,What happens to all my stored cloud documents if I terminate my paid subscription?,subscription_management,False
+TR_176,Is this mechanical wireless keyboard compatible with macOS and iPadOS?,product_inquiry,False
+TR_189,is this facial moisturizer vegan and cruelty-free certified?,product_inquiry,False
+TR_185,Does your software offer on-premise self-hosted deployment options?,product_inquiry,False
+TR_187,can this 4K monitor run at 120Hz refresh rate over HDMI 2.1?,product_inquiry,False
+TR_200,What is the recommended maintenance schedule for this espresso machine?,product_inquiry,False
+TR_181,is the protective phone case waterproof or only water-resistant?,product_inquiry,False
+TR_190,Will this graphics card fit comfortably inside a standard Micro-ATX computer case?,product_inquiry,False
+TR_179,Does the noise-canceling headset come with an international manufacturer warranty?,product_inquiry,False
+TR_182,Does this smart thermostat work with dual-fuel heat pump HVAC systems?,product_inquiry,False
+TR_188,What accessories and cables are included inside the retail product box?,product_inquiry,False
+TR_195,Does the product include a user manual in Spanish and French?,product_inquiry,False
+TR_198,does this smart security camera require a mandatory monthly cloud subscription to work?,product_inquiry,False
+TR_184,what materials are used in the upholstery of the ergonomic office chair?,product_inquiry,False
+TR_199,Can this e-bike withstand heavy rainfall and extreme winter temperatures?,product_inquiry,False
+TR_186,Are there bulk quantity wholesale discounts available for educational institutions?,product_inquiry,False
+TR_192,does your API support GraphQL queries or REST endpoints only?,product_inquiry,False
+TR_180,What is the key functional difference between the Standard and Deluxe editions?,product_inquiry,False
+AUG_00004,"Hey, can i get my mpney back? The shoes arrived damaged and don't fit at all.",refund_request,True
+AUG_00005,"Hey, can i get my money back? The shoes arrived damaged and don't fit at all.",refund_request,True
+AUG_00006,"Hey, can i get my money back? The shoes arrived damaged and do not fit at all.",refund_request,True
+AUG_00007,need a refund asap dharged twice foe the same hoodie,refund_request,True
+AUG_00008,need a refund asap charged twice for the same hoodie,refund_request,True
+AUG_00014,how do i claim a refumd for defective electronics item?,refund_request,True
+AUG_00015,how do i claim a refund for defective electronics item?,refund_request,True
+AUG_00016,You guys seng me the wrong color jacket. Give me my money back please.,refund_request,True
+AUG_00017,You guys sent me the wrong color jacket. Give me my money back please.,refund_request,True
+AUG_00018,You guys sent me the wrong color jacket. give me my money back please.,refund_request,True
+AUG_00024,"refund plz, bought wrpng item by mistake 10 mins ago",refund_request,True
+AUG_00025,"refund plz, b0ught wrong item by mistake 10 mins ago",refund_request,True
+AUG_00026,I am writing to formalpy request a reimbursement for invoice #INV-7731.,refund_request,True
+AUG_00027,I am writing to formally request a reimbursement for invoice #INV-7731.,refund_request,True
+AUG_00028,I am writing to formally request a reimbursement for invoice #inv-7731.,refund_request,True
+AUG_00029,I am writing to formally request a reimbursement fpr invoice #INV-7731.,refund_request,True
+AUG_00030,Can you credit the funds badk to my original payment card?,refund_request,True
+AUG_00031,Can you credit the funds back to my original payment card?,refund_request,True
+AUG_00032,Can you credit the funds back to my original charge debit card?,refund_request,True
+AUG_00033,Can you credit the funds vack to my original charge debut card?,refund_request,True
+AUG_00034,"The course content was completwly outdated, expecting a yotal refujd ubder your 30-day guarantee.",refund_request,True
+AUG_00035,"The course content was completely outdated, expecting a total refund under your 30-day guarantee.",refund_request,True
+AUG_00036,"The course content was completely outdated, expecting a total reimbursement under your 30-day guarantee.",refund_request,True
+AUG_00037,"hey agent, how long does a rwfund usually take to reflect on Vssa?",refund_request,True
+AUG_00038,"hey agent, how long does a refund usually take to reflect on Visa?",refund_request,True
+AUG_00039,"hey agent, how long does a credit usually take to reflect on Visa?",refund_request,True
+AUG_00040,"money back please, item nevet arrived and selker is not responding",refund_request,True
+AUG_00041,"money back please, item never arrived and seller is not responding",refund_request,True
+AUG_00042,"money back please, item never arrived and seller isn't responding",refund_request,True
+AUG_00043,"money back kindly, item never arrived and seller is not responding",refund_request,True
+AUG_00044,"The flight was cancelled by thd airline, please issue an immediate refund.",refund_request,True
+AUG_00045,"The flight was cancelled by the airline, please issue an immediate refund.",refund_request,True
+AUG_00046,"The flight was cancelled by the airline, please issue an immediate reimbursement.",refund_request,True
+AUG_00047,"Ths flight was cancelled by tne airline, kindly issue an immediate credit.",refund_request,True
+AUG_00048,my refund status is showing pending for over 10 busindss days now,refund_request,True
+AUG_00049,my refund status is showing pending for over 10 business days now,refund_request,True
+AUG_00050,My refund status is showing pending for over 10 business days now,refund_request,True
+AUG_00051,my credit status is showing pending for over 10 bysiness days now,refund_request,True
+AUG_00052,can i get paftial refund if i keep ond item from the bundle?,refund_request,True
+AUG_00053,can i get partial refund if i keep 0ne item from the bundle?,refund_request,True
+AUG_00054,"I was ivercharged on my monthly bill by $45, need that refunded right away.",refund_request,True
+AUG_00055,"I was overcharged on my monthly bill by $45, need that refunded right away.",refund_request,True
+AUG_00056,Please reimburse the return shipping fee as well wince ghe faylt wqs on your warehouse.,refund_request,True
+AUG_00057,Please reimburse the return shipping fee as well since the fault was on your warehouse.,refund_request,True
+AUG_00058,Please reimburse the return dispatch fee as well since the fault was on your warehouse.,refund_request,True
+AUG_00061,"i did not authorixe this chaege, rerund immediately or i will dispute witb bank",refund_request,True
+AUG_00062,"i did not authorize this charge, refund immediately or i will dispute with bank",refund_request,True
+AUG_00063,"Representative told me yesterday I would gst a retund, cnecking on confirmation number.",refund_request,True
+AUG_00064,"Representative told me yesterday I w0uld get a refund, checking on confirmation number.",refund_request,True
+AUG_00072,can u pls cancel my ordwr placed 5 muns ago? ordered wrong address,cancel_order,True
+AUG_00073,can u pls cancel my order placed 5 mins ago? ordered wrong address,cancel_order,True
+AUG_00074,Please stop ghe shipment for osder 44102 and cancel it immediately.,cancel_order,True
+AUG_00075,Please stop the shipment for order 44102 and cancel it immediately.,cancel_order,True
+AUG_00076,"I want to revoke my order, I found a cheaper alterbative elsewhere.",cancel_order,True
+AUG_00077,"I want to revoke my 0rder, I found a cheaper alternative elsewhere.",cancel_order,True
+AUG_00078,"i want to revoke my order, i found a cheaper alternative elsewhere.",cancel_order,True
+AUG_00083,How can I abort tbe orddr I submitted this morning?,cancel_order,True
+AUG_00084,HOw can I abort the order I submitted this morning?,cancel_order,True
+AUG_00085,"Please do not dispatch the package, I wish to terminate this purchase order.",cancel_order,True
+AUG_00086,"Please do not dispatch the package, I wish to terminate this purchase order.",cancel_order,True
+AUG_00090,"cancel my ordrr immediately, taking way too long to prepare",cancel_order,True
+AUG_00091,"cancel my order immediately, taking way too long to prepare",cancel_order,True
+AUG_00094,"need to void order 11029, my chipd pressed order bytton sithout permission",cancel_order,True
+AUG_00095,"need to void order 11029, my child pressed order button without permission",cancel_order,True
+AUG_00096,Kindly discard order #8841 as I no longer require the items.,cancel_order,True
+AUG_00097,Kindly discard order #8841 as I no longer require the items.,cancel_order,True
+AUG_00100,Why can't I click the cancel butson on my order xetails page?,cancel_order,True
+AUG_00101,Why can't I click the cancel butt0n on my order details page?,cancel_order,True
+AUG_00102,Pkease confirm that order #65219 has besn successfully cancelled.,cancel_order,True
+AUG_00103,Please confirm that order #652I9 has been successfully cancelled.,cancel_order,True
+AUG_00104,i want to cancel one specific itej from my basket order without cancelling everything,cancel_order,True
+AUG_00105,i want to cancel one specific item from my basket order without cancelling everything,cancel_order,True
+AUG_00106,"Cancel my order please, delivery estimate changed from 2 dayz to 3 weeks.",cancel_order,True
+AUG_00107,"Cancel my order please, delivery estimate changed from 2 days to 3 weeks.",cancel_order,True
+AUG_00108,"stop my request please, delivery estimate changed from 2 days to 3 weeks.",cancel_order,True
+AUG_00111,"terminate order 491823, gought it in a physical store instezd",cancel_order,True
+AUG_00112,"terminate order 491823, bought it in a physical store instead",cancel_order,True
+AUG_00113,"emergency cancel order 50123, card was compromised",cancel_order,True
+AUG_00114,"emergency cancel order 5o123, card was compromised",cancel_order,True
+AUG_00115,"emergency void request 50123, card was compromised",cancel_order,True
+AUG_00116,I would appreciate if you could halt ajd cancel my pendinf transaction #8172.,cancel_order,True
+AUG_00117,I would appreciate if you could halt and cancel my pending transaction #8I72.,cancel_order,True
+AUG_00118,"cancdl this item right now, do not send it to my office",cancel_order,True
+AUG_00119,"cancel this item right now, do not send it to my office",cancel_order,True
+AUG_00122,Pleaxe drop order #12398 from my queue.,cancel_order,True
+AUG_00123,Please drop order #12398 from my queue.,cancel_order,True
+AUG_00124,Whwre is my parcel? Tue tracking number says delivered but I received noghing.,track_shipping,True
+AUG_00125,Where is my parcel? The tracking number says delivered but I received nothing.,track_shipping,True
+AUG_00126,Where is my parcel? The locating number says delivered but I received nothing.,track_shipping,True
+AUG_00127,Can you give me an update on tracking number FedEd 99281726?,track_shipping,True
+AUG_00128,Can y0u give me an update on tracking number FedEx 99281726?,track_shipping,True
+AUG_00132,Tue tracking link provuded in yhe confirmation email leqds to a 404 pagw.,track_shipping,True
+AUG_00133,The tracking link provided in the confirmation email leads to a 404 page.,track_shipping,True
+AUG_00134,The locating link provided in the confirmation email leads to a 404 page.,track_shipping,True
+AUG_00135,Could yoi check the current csurier status for shipment #SHP-9182?,track_shipping,True
+AUG_00136,Could you check the current courier status for shipment #SHP-9182?,track_shipping,True
+AUG_00137,package is stuck in Memphis transit hub for four vonsecutive days,track_shipping,True
+AUG_00138,package is stuck in Memphis transit hub for four consecutive days,track_shipping,True
+AUG_00143,where is order #4491? says out for delivery xince 8am,track_shipping,True
+AUG_00144,where is Order #4491? says out for delivery since 8am,track_shipping,True
+AUG_00145,I haven't received ajy shipping dispstch notification for order pkaced 6 days ago.,track_shipping,True
+AUG_00146,I haven't received any shipping dispatch notification for order placed 6 days ago.,track_shipping,True
+AUG_00149,Tracking says delivefed to front porch but my CCTV footage shows no courier arrkved.,track_shipping,True
+AUG_00150,Tracking says delivered to front porch but my CCTV footage shows no courier arrived.,track_shipping,True
+AUG_00153,customs dlearance statuz update for international package #INTL-88219,track_shipping,True
+AUG_00154,customs c|earance status update for international package #INTL-88219,track_shipping,True
+AUG_00155,"package delivery rescheduled without notifying me, what is foing on?",track_shipping,True
+AUG_00156,"package delivery reschedu1ed without notifying me, what is going on?",track_shipping,True
+AUG_00157,can i reroute the package to a local pickup ooint locksr?,track_shipping,True
+AUG_00158,can i reroute the package to a local pickup point locker?,track_shipping,True
+AUG_00159,Any news on why shipment 77123 has an exveption alert?,track_shipping,True
+AUG_00160,Any news on why shipment 77123 has an exception alert?,track_shipping,True
+AUG_00161,Any news on why shipment 77123 has an exception alert?,track_shipping,True
+AUG_00162,Any news on why shipment 77123 has an exception alert?,track_shipping,True
+AUG_00163,"delivery boy called and disconnected, wgere can i track his location?",track_shipping,True
+AUG_00164,"delivery boy called and disconnected, where can i track his location?",track_shipping,True
+AUG_00165,"delivery boy called and disconnected, where can i track his location?",track_shipping,True
+AUG_00166,"delivery boy called and disconnected, whefe can i track his location?",track_shipping,True
+AUG_00175,"track order 88291, urgently heed it before tomorrow morning flighy",track_shipping,True
+AUG_00176,"track order 8B291, urgently need it before tomorrow morning flight",track_shipping,True
+AUG_00177,Why does tracking say 'Address Incomplete' whrn I ejtered full street details?,track_shipping,True
+AUG_00178,Why does tracking say 'Address Incomplete' when I entered full street details?,track_shipping,True
+AUG_00179,how mqny days for standard shipping to Seattle area?,track_shipping,True
+AUG_00180,how many days for standard shipping to Seattle area?,track_shipping,True
+AUG_00181,how many days for standard shipment to Seattle area?,track_shipping,True
+AUG_00182,hsw nany days for standard shipment to Seattle area?,track_shipping,True
+AUG_00183,"Tracking status changed to 'Returned to Sender', whu was this nos delivered?",track_shipping,True
+AUG_00184,"Tracking status changed to 'Returned to Sender', why was this not delivered?",track_shipping,True
+AUG_00185,"tracking status changed to 'returned to sender', why was this not delivered?",track_shipping,True
+AUG_00186,My credit card was declined at checkout even though I have sufficient balance.,payment_issue,True
+AUG_00187,My credit card was declined at checkout even though I have sufficient ba|ance.,payment_issue,True
+AUG_00188,I aas charged twicd on my American Express card for a single checkout transaction.,payment_issue,True
+AUG_00189,I was charged twice on my American Express card for a single checkout transaction.,payment_issue,True
+AUG_00190,I was charged twice on my american express card for a single checkout transaction.,payment_issue,True
+AUG_00193,Do yoj accept PayPal or Apple Pay for recurring subscriptions?,payment_issue,True
+AUG_00194,Do you accept PayPaI or Apple Pay for recurring subscriptions?,payment_issue,True
+AUG_00195,Do you accept PayPal or Apple Pay for recurring subscriptions?,payment_issue,True
+AUG_00196,Do yoj accept PayPal or Apple Pay for recurring subscriptions?,payment_issue,True
+AUG_00197,The promotion discoint coupon code is not applying to the final checkout total.,payment_issue,True
+AUG_00198,The promoti0n discount coupon code is not applying to the final checkout total.,payment_issue,True
+AUG_00199,The promotion discount coupon code is not applying to the final checkout total.,payment_issue,True
+AUG_00200,The promotion discount coupon code is not applying to the final checkout total.,payment_issue,True
+AUG_00205,My bank sent an OTP SMS but the checkout screen timed oyt before I could submit it.,payment_issue,True
+AUG_00206,My bank sent an OTP SMS but the checkout screen timed out before I could submit it.,payment_issue,True
+AUG_00207,My bank sent an OTP SMS but the checkout screen timed out before I could submit it.,payment_issue,True
+AUG_00208,My bsnk sent an OTP SMS but the checkout screen timed sut before I could submit it.,payment_issue,True
+AUG_00209,can i split payment across two different debit cards?,payment_issue,True
+AUG_00210,can i split payment across two different debit cards?,payment_issue,True
+AUG_00211,can i split billing across two different debit cards?,payment_issue,True
+AUG_00216,money was deducted from my account but order status says unpaid / pending paymeng,payment_issue,True
+AUG_00217,money was deducted from my accOunt but order status says unpaid / pending payment,payment_issue,True
+AUG_00218,money was deducted from my profile but order status saya unpaid / pendong billing,payment_issue,True
+AUG_00219,Why did your platform charge a foreign exchange convereion fee?,payment_issue,True
+AUG_00220,Why did your platform charge a foreign exchange conversion fee?,payment_issue,True
+AUG_00221,Why did your platform charge a foreign exchange conversion fee?,payment_issue,True
+AUG_00222,Why did your platform charge a foreign exchange conversion fee?,payment_issue,True
+AUG_00223,How do I update my expired Mastercard on rile for upcoming automatic renewal?,payment_issue,True
+AUG_00224,How do I update my expired Mastercard on file for upcoming automatic renewal?,payment_issue,True
+AUG_00225,gift card balance shows $50 bug checkout says invalid vouchsr code,payment_issue,True
+AUG_00226,gift card balance shows $50 but checkout says invalid voucher code,payment_issue,True
+AUG_00227,paymens gateway is throwing a 502 bad gateway etror on ghe submit page,payment_issue,True
+AUG_00228,payment gateway is throwing a 502 bad gateway error on the submit page,payment_issue,True
+AUG_00229,Can I wire transfer viq ACH directly to pay this commercial invoice?,payment_issue,True
+AUG_00230,Can I wire transfer via ACH directly to pay this commercial invoice?,payment_issue,True
+AUG_00231,Can I wire transfer via ACH directly to pay this commercial invoice?,payment_issue,True
+AUG_00232,Can I wire transfer via ACH directly to pay this commercial invoice?,payment_issue,True
+AUG_00233,sustem kewps rejecting my European debit care with 3D Secure verification,payment_issue,True
+AUG_00234,system keeps rejectinq my European debit card with 3D Secure verification,payment_issue,True
+AUG_00235,system keeps rejecting my european debit card with 3d secure verification,payment_issue,True
+AUG_00236,Wuy is sales tax beibg charged on a tax-dxempt non-profit purchase?,payment_issue,True
+AUG_00237,Why is sales tax being charged on a tax-exempt non-profit purchase?,payment_issue,True
+AUG_00241,Cqn I change my default billing payment method without danceling active orders?,payment_issue,True
+AUG_00242,Can I change my default billing payment method without canceling active orders?,payment_issue,True
+AUG_00243,"Checkout says 'Transaction Nog Permitted By Issuer', what should I do?",payment_issue,True
+AUG_00244,"Checkout says 'Transaction Not Permitted By Issuer', what should I do?",payment_issue,True
+AUG_00245,"Checkout says 'Transaction Not Permitted By Issuer', what should I do?",payment_issue,True
+AUG_00246,"Checkout says 'Transaction Not Permitted By Issuer', what should I ro?",payment_issue,True
+AUG_00257,chargeback warning: resokve duplicate debit wighin 24 hours olease,payment_issue,True
+AUG_00258,chargeback warning: resolve duplicate debit within 24 hours please,payment_issue,True
+AUG_00259,chargeback warning: resolve duplicate debit within 24 hours please,payment_issue,True
+AUG_00260,chargeback warning: resolve duplicate debit within 24 hours kindly,payment_issue,True
+AUG_00264,I forgot my account password znd the reset link email never asrives in my inbox.,account_recovery,True
+AUG_00265,I forgot my account password and the reset link email never arrives in my inb0x.,account_recovery,True
+AUG_00266,"My accoumt is lockdd due to too jany failed login attempte, please unlock.",account_recovery,True
+AUG_00267,"My acc0unt is locked due to toO many failed login attempts, please unlock.",account_recovery,True
+AUG_00268,cannot login 2fa code sent to old phone nymber that i no longer psssess,account_recovery,True
+AUG_00269,cannot login 2fa code sent to old phone number that i no longer possess,account_recovery,True
+AUG_00270,How do I regain access to my accoujt if I lost my two-factor authenticator backup codes?,account_recovery,True
+AUG_00271,How do I regain access to my account if I lost my two-factor authenticator backup codes?,account_recovery,True
+AUG_00272,"I suspect my profile was hacmed, somesne changed my registered email without my consent.",account_recovery,True
+AUG_00273,"I suspect my profiIe was hacked, someone changed my registered email without my consent.",account_recovery,True
+AUG_00274,"I suspect my profile was hacked, someone changed my registered email without my consent.",account_recovery,True
+AUG_00275,"I suspect my profile was hacked, someone changed my registered email without my consent.",account_recovery,True
+AUG_00276,can you unlock my profile plesse username is john_eoe99,account_recovery,True
+AUG_00277,can you unlock my profile please username is john_doe99,account_recovery,True
+AUG_00278,can you unlock my profile please username is john_doe99,account_recovery,True
+AUG_00279,caj you unlock my profile kindly username is john_doe99,account_recovery,True
+AUG_00283,Need to change my primary login email addtess from my sniversity email to personal.,account_recovery,True
+AUG_00284,Need to change my primary login email address from my university email to personal.,account_recovery,True
+AUG_00285,Hlw can I verify my identity to restore access to my deactivated enterprise account?,account_recovery,True
+AUG_00286,How can I verify my identity to restore access to my deactivated enterprise account?,account_recovery,True
+AUG_00287,How can I verify my identity to restore access to my deactivated enterprise user account?,account_recovery,True
+AUG_00288,Yow can I verify my identity to restore access to my deactivated enterprise user account?,account_recovery,True
+AUG_00289,login pahe loops bavk to login without any error message displayex,account_recovery,True
+AUG_00290,login page loops back to login without any error message displayed,account_recovery,True
+AUG_00295,Can an administrator manually reser my password and send temporary credentials?,account_recovery,True
+AUG_00296,Can an administrator manually reset my password and send temporary credentials?,account_recovery,True
+AUG_00297,Can an administrator manually reset my passcode and send temporary credentials?,account_recovery,True
+AUG_00301,"forgot username associated with my ordef, only have my credit card number",account_recovery,True
+AUG_00302,"forgot username associated with my order, 0nly have my credit card number",account_recovery,True
+AUG_00310,captcha on the login screen is brokwn and fails every single attempt,account_recovery,True
+AUG_00311,captcha on the login screen is broken and fails every single attempt,account_recovery,True
+AUG_00312,Please unlink my old Google ZSO account and let me srt an email and pawsword.,account_recovery,True
+AUG_00313,Please unlink my old Google SSO account and let me set an email and password.,account_recovery,True
+AUG_00314,Please unlink my old Google SSO profile ahd let me ses an email and passcode.,account_recovery,True
+AUG_00319,account blocked message aopears every time i connect vua home VPN,account_recovery,True
+AUG_00320,account blocked messa9e appears every time i connect via home VPN,account_recovery,True
+AUG_00321,Cam you resend the account activation confirmation email?,account_recovery,True
+AUG_00322,Can you resend the account activation confirmation email?,account_recovery,True
+AUG_00323,"Heop me restore access to my account, all my project files amd receipte sre in there.",account_recovery,True
+AUG_00324,"Help me restore access to my account, all my project files and receipts are in there.",account_recovery,True
+AUG_00325,"help me restore access to my account, all my project files and receipts are in there.",account_recovery,True
+AUG_00328,"I have two duplicate accounts registered undrr slightly different emails, can you merge them?",account_recovery,True
+AUG_00329,"I have two duplicate accounts registered under slightly different emails, can you merge them?",account_recovery,True
+AUG_00330,"I have two duplicate accounts registered under slihhtly different emails, csn you merge them?",account_recovery,True
+AUG_00333,The wsb dashboard crashes with a JavaScript error whenever I open the analytics tab.,technical_support,True
+AUG_00334,The web dashboard crashes with a JavaScript error whenever I open the analytics tab.,technical_support,True
+AUG_00335,Desktop desktop client keeps freezing during audio export rendering on Wsndows 11.,technical_support,True
+AUG_00336,Desktop desktop c1ient keeps freezing during audio export rendering on Windows 1I.,technical_support,True
+AUG_00337,Desktop desktop client keeps freezing during audio export rendering on Windows 11.,technical_support,True
+AUG_00338,Desktop desktop client keeps freezing during audio export rendering on Windows 11.,technical_support,True
+AUG_00351,Pysh notifications are not clming throygh on my iPhone even with permissions enabled.,technical_support,True
+AUG_00352,Push notifications are nOt coming through on my iPhone even with permissions enabled.,technical_support,True
+AUG_00353,Push notifications are not coming through on my iPhone even with permissions enabled.,technical_support,True
+AUG_00354,Push notificatsons are not coming rhrough on my iPhone even with permissions enabled.,technical_support,True
+AUG_00355,Ths latesr software patch broke compatibilits with our external UDB barcode scanner.,technical_support,True
+AUG_00356,The latest software patch broke compatibility with Our external USB barcode scanner.,technical_support,True
+AUG_00357,The latest software patch broke compatibility with our external USB barcode scanner.,technical_support,True
+AUG_00358,The latest software patch broke compatibility with our external USB barcode scanner.,technical_support,True
+AUG_00359,screen goes completely blank white when clicking the chexkout button in Safari,technical_support,True
+AUG_00360,screen goes completely blank white when clicking the checkout button in 5afari,technical_support,True
+AUG_00361,screen goes completely blank white when clicking the checkout button in Safari,technical_support,True
+AUG_00362,screen goes completely blqnk wjite when clicking the checkout button in Safari,technical_support,True
+AUG_00363,API webhook calls are failing with SSL hahdshake timeout errors since this morning.,technical_support,True
+AUG_00364,API webh0ok calls are failing with SSL handshake timeout errors since this morning.,technical_support,True
+AUG_00365,API webhook calls are failing with SSL handshake timeout errors since this morning.,technical_support,True
+AUG_00366,API webhook calls are failing with SSL handshake timeout errors since this morning.,technical_support,True
+AUG_00367,How do I gdnerate and export debug diagnostic log files for your engineering team?,technical_support,True
+AUG_00368,How do I generate and export debug diagnostic log files for your engineering team?,technical_support,True
+AUG_00369,How do I generate and export debug diagnostic log files for your engineering team?,technical_support,True
+AUG_00370,How do I generate and exporr debug diagnostic log files for your engineering team?,technical_support,True
+AUG_00371,Search bar autocomplete folter is unresponsive and does not show any dropdown results.,technical_support,True
+AUG_00372,Search bar autocomplete filter is unresponsive and does nOt show any dropdown results.,technical_support,True
+AUG_00373,Search bar autocomplete filter is unresponsive and doesn't show any dropdown results.,technical_support,True
+AUG_00374,Search bar autocomplete filter is unresponsive and does not show any dropdown results.,technical_support,True
+AUG_00383,dark mode toggle flickers violdntly znd causes high GPU utilizatoon in Chrome brswser,technical_support,True
+AUG_00384,dark mode toggle flickers violently and causes high GPU utilization in Chrome browser,technical_support,True
+AUG_00385,dark mode toggle flickers violently and causes high GPU utilization in Chrome browser,technical_support,True
+AUG_00386,dark mode toggle flickers violently and causes hiyh GPU utilization in Chrome browser,technical_support,True
+AUG_00387,Database connection pool exhausted error message during peaj morning trwffic.,technical_support,True
+AUG_00388,Database connection pool exhausted error message during peak morning traffic.,technical_support,True
+AUG_00389,Database connection pool exhausted issue message during peak msrning traffic.,technical_support,True
+AUG_00390,Audio outpjt is crackling through Bluetooth headphones during conference calls.,technical_support,True
+AUG_00391,Audio output is crackling through Bluetooth headphones during conference calls.,technical_support,True
+AUG_00392,Audio output is crackling through Bluetooth headphones during conference calls.,technical_support,True
+AUG_00393,Audio sutput is crackling through Bluetooth headphones during conference calls.,technical_support,True
+AUG_00394,drwg and drop file upload cojponent is mot working on Firefox 120,technical_support,True
+AUG_00395,drag and drop file upload component is not working on Firef0x 120,technical_support,True
+AUG_00396,drag and deop file upload component is not functioning on Firefox 120,technical_support,True
+AUG_00397,Is there a workaround fos the camera permissiob denial bug on macOS Sonoma?,technical_support,True
+AUG_00398,Is there a workaround for the camera permission denial bug on macOS Sonoma?,technical_support,True
+AUG_00399,Is there a workaround for the camera permission denial bug on macOS Sonoma?,technical_support,True
+AUG_00400,Is there a workarlund for the camera permission denial bug on macIS Sonoma?,technical_support,True
+AUG_00408,Real-time collaboratiob changes are overwriting coworker edigs without warning.,technical_support,True
+AUG_00409,Real-time collaboration changes are overwriting coworker edits without warning.,technical_support,True
+AUG_00410,Real-time collaboration changes are overwriting coworker edits without warning.,technical_support,True
+AUG_00411,Real-time collaboration changes are overwriting coworker edits without warning.,technical_support,True
+AUG_00412,"siftware won't install, throws misssng Visual C++ redistributable dependency error",technical_support,True
+AUG_00413,"software won't install, throws missing Visual C++ redistributable dependency error",technical_support,True
+AUG_00414,"Software won't install, throws missing visual c++ redistributable dependency problem",technical_support,True
+AUG_00415,"software aon't install, throws missing Visual C++ redistrihutable dependency glitch",technical_support,True
+AUG_00416,Keyboard shortcuts like Ctrl+Z and Ctrl+S stopped tesponding in ghe latest web buile.,technical_support,True
+AUG_00417,Keyboard shortcuts like Ctrl+Z and Ctrl+S stopped responding in the latest web build.,technical_support,True
+AUG_00418,Keyboard shortcuts like Ctrl+Z and Ctrl+S stopped responding in the latest web build.,technical_support,True
+AUG_00419,Keyboard shortcuts like Ctrl+Z and Ctrk+S stopped rrsponding in the latest web build.,technical_support,True
+AUG_00420,"Sefver response latency exceeded 15000ms on production endpoints, please investigate.",technical_support,True
+AUG_00421,"Server response latency exceeded 15000ms on production endpoints, please investigate.",technical_support,True
+AUG_00422,"Server response latency exceeded 15000ms on production endpoints, please investigate.",technical_support,True
+AUG_00423,"Server response latency ezceeded 15000ms on production endpoints, pleasd investigate.",technical_support,True
+AUG_00426,How do I upgrade our seam account from thr Basic plam to the Enterprise tier?,subscription_management,True
+AUG_00427,How do I upgrade our team account from the Basic pIan to the Enterprise tier?,subscription_management,True
+AUG_00428,"pls stop suto renew for my annual membership, do mot want to be charged next month",subscription_management,True
+AUG_00429,"pls stop auto renew for my annual membership, do not want to be charged next month",subscription_management,True
+AUG_00434,How msny tdam seats are currently included in our business subscription licenze?,subscription_management,True
+AUG_00435,How many team seats are currently included in Our business subscription license?,subscription_management,True
+AUG_00436,How many team seats are currently included in our business plan license?,subscription_management,True
+AUG_00437,How many teak seats are currently included in our business membership license?,subscription_management,True
+AUG_00440,Can I payse my fitness membership xubscription for 2 months while I am traveling abroad?,subscription_management,True
+AUG_00441,Can I pause my fitness membership subscription for 2 months while I am traveling abroad?,subscription_management,True
+AUG_00442,Can I pause my fitness membership subscription for 2 months while i'm traveling abroad?,subscription_management,True
+AUG_00443,"downgrade my plan to free tier immediately, no longer jsing the advanced features",subscription_management,True
+AUG_00444,"downgrade my plan to free tier immediately, no lonqer using the advanced features",subscription_management,True
+AUG_00447,What happebs to all my stored cloud documents if I terminate my paif subscription?,subscription_management,True
+AUG_00448,What happens to all my stored cloud documents if I terminate my paid subscription?,subscription_management,True
+AUG_00449,What happens to all my stored cloud documents if i terminate my paid membership?,subscription_management,True
+AUG_00450,What happens to all my dtored cloud documents if I terminate my paid membership?,subscription_management,True
+AUG_00451,wznt to reactivate my previously canceled premium plan sith my sabed settings,subscription_management,True
+AUG_00452,want to reactivate my previously canceled premium plan with my saved settings,subscription_management,True
+AUG_00453,want to reactivate my previously canceled premium plan with my saved settings,subscription_management,True
+AUG_00454,want to reactivate my previously canceled premium plan with my saved settings,subscription_management,True
+AUG_00455,Is there a student or nom-profit disfount available on the annual indivsdual tier?,subscription_management,True
+AUG_00456,Is there a student or non-prOfit discount available on the annual individual tier?,subscription_management,True
+AUG_00457,Is there a student or non-profit discount available on the annual individual tier?,subscription_management,True
+AUG_00458,Is there a student or non-profit discount available on the annual individual tier?,subscription_management,True
+AUG_00459,free trial ensed without notification abd charged my credit card full year fee,subscription_management,True
+AUG_00460,free trial ended without notification and charged my credit card full year fee,subscription_management,True
+AUG_00461,free trial ended without notification and debited my credit debit card full year fee,subscription_management,True
+AUG_00462,Can I remive 3 unused member seats from our actuve monthly recurring plan?,subscription_management,True
+AUG_00463,Can I remove 3 unused member seats from our active monthly recurring plan?,subscription_management,True
+AUG_00464,Can I remove 3 unused member seats from our active monthly recurring plan?,subscription_management,True
+AUG_00465,Can I remove 3 unused member seats frok our active monthly recurring ppan?,subscription_management,True
+AUG_00470,"cancel my subscription roght nlw, your service qualigy has degraded significantly",subscription_management,True
+AUG_00471,"cancel my subscription right now, your service quality has degraded significantly",subscription_management,True
+AUG_00474,hiw do i tsrn off automatic recurring billing on the mobile app?,subscription_management,True
+AUG_00475,how do i turn 0ff automatic recurring billing on the mobile app?,subscription_management,True
+AUG_00476,How do i turn off automatic recurring billing on the mobile app?,subscription_management,True
+AUG_00477,how do i turn off automatic recurribg billing on the mobile app?,subscription_management,True
+AUG_00478,My subscriptisn shows 'pasr due' status even though my bank confirms payment wens through.,subscription_management,True
+AUG_00479,My subscription shows 'past due' status even though my bank confirms payment went through.,subscription_management,True
+AUG_00480,my subscription shows 'past due' status even though my bank confirms payment went through.,subscription_management,True
+AUG_00481,Wikl I get prorated crsdit if I upgrade in the middle of lur billing cycle?,subscription_management,True
+AUG_00482,Will I get prorated credit if I upgrade in the middle of our billing cycle?,subscription_management,True
+AUG_00483,Will i get prorated credit if i upgrade in the middle of our billing cycle?,subscription_management,True
+AUG_00487,Is tgere any early termination fee for canceling ojr 1-year contract early?,subscription_management,True
+AUG_00488,Is there any early termination fee for canceling our 1-year contract early?,subscription_management,True
+AUG_00489,Is there any early termination fee for canceling our 1-year contract early?,subscription_management,True
+AUG_00490,Is there any early termination fee fos canceling oyr 1-year contsact early?,subscription_management,True
+AUG_00491,"stop dharging my credit card every month, I haven't logged in for 6 months",subscription_management,True
+AUG_00492,"stop charging my credit card every month, I haven't l0gged in for 6 months",subscription_management,True
+AUG_00493,how do i add extra stosage adf-on to oyr existing clouf plwn?,subscription_management,True
+AUG_00494,how do i add extra storage add-on to our existing cloud plan?,subscription_management,True
+AUG_00495,how do i add extra storage add-on to our existing cloud plan?,subscription_management,True
+AUG_00496,how do i wdd extra storage add-on to our existing cloud plan?,subscription_management,True
+AUG_00499,Is this mechanical wireless keyboard compatible with macOE ahd iPadLS?,product_inquiry,True
+AUG_00500,Is this mechanical wireless keyboard compatible with macO5 and iPadOS?,product_inquiry,True
+AUG_00501,is this mechanical wireless keyboard compatible with macos and ipados?,product_inquiry,True
+AUG_00502,Is thus mechanical aireless keyboard compatible with macOS anf iPadOS?,product_inquiry,True
+AUG_00511,Does the noise-canceling headset come with an international manufacturer warranty?,product_inquiry,True
+AUG_00512,Does the noise-canceling headset come with an international manufacturer warranty?,product_inquiry,True
+AUG_00513,Does the noise-canceling headset come with an international manufacturer warranty?,product_inquiry,True
+AUG_00514,Does the noise-canceling headset come with an international manufacturer warranty?,product_inquiry,True
+AUG_00515,What is the key functional difference between the Standard and Deluxe editiins?,product_inquiry,True
+AUG_00516,What is the key functional difference between the Standard and Deluxe editions?,product_inquiry,True
+AUG_00517,What is the key functional difference between the Standard and Deluxe editions?,product_inquiry,True
+AUG_00518,What is the key functional difference between the Standard ane Deluxe editions?,product_inquiry,True
+AUG_00519,is yhe protective phone case waterproof or only wzter-resistant?,product_inquiry,True
+AUG_00520,is the protective phone case waterproof or only water-resistant?,product_inquiry,True
+AUG_00521,is the protective phone case waterproof or only water-resistant?,product_inquiry,True
+AUG_00522,is the protective phone case watefproof or only water-resistamt?,product_inquiry,True
+AUG_00523,Does thiz smart thermostat work with dual-fuel heat pump HVAC systems?,product_inquiry,True
+AUG_00524,Does this smart thermostat work with dual-fuel heat pump HVAC systems?,product_inquiry,True
+AUG_00525,Does this smart thermostat work with dual-fuel heat pump HVAC systems?,product_inquiry,True
+AUG_00526,Does this smart thermostat work wish dual-fuel heat pump HVAC systems?,product_inquiry,True
+AUG_00531,what materials are used in the ulholstery of the ergonomic otfice chair?,product_inquiry,True
+AUG_00532,what materials are used in the upholstery of the ergonomic office chair?,product_inquiry,True
+AUG_00533,what materials are used in the upholstery of the ergonomic office chair?,product_inquiry,True
+AUG_00534,what materials are used in the upholstery of the esgonomic office chair?,product_inquiry,True
+AUG_00535,Does your software offer on-premise self-hosted deployment options?,product_inquiry,True
+AUG_00536,Does your software offer on-premise self-hosted deployment options?,product_inquiry,True
+AUG_00537,Does your software offer on-premise self-hosted deployment options?,product_inquiry,True
+AUG_00538,Does yoir software offer on-prdmise self-hosted deployment options?,product_inquiry,True
+AUG_00539,Are there buli quantity wholesale discounts available for educational institutions?,product_inquiry,True
+AUG_00540,Are there bulk quantity wholesale discounts available for educational institutions?,product_inquiry,True
+AUG_00541,Are there bulk quantity wholesale discounts available for educational institutions?,product_inquiry,True
+AUG_00542,Are there nulk quantity wholwsale discountz available for educatiohal institutisns?,product_inquiry,True
+AUG_00543,can this 4K monitor run at 120Hz regresh rate over HDMI 2.1?,product_inquiry,True
+AUG_00544,can this 4K monitor run at 1Z0Hz refresh rate over HDMI 2.1?,product_inquiry,True
+AUG_00545,Can this 4k monitor run at 120hz refresh rate over hdmi 2.1?,product_inquiry,True
+AUG_00546,can thix 4K monitor run at 120Hz refresh ratd over HDMI 2.1?,product_inquiry,True
+AUG_00547,Whar accessories and cables are included inside the retail product box?,product_inquiry,True
+AUG_00548,What accessories and cables are included inside the retail product box?,product_inquiry,True
+AUG_00549,What accessories and cables are included inside the retail product box?,product_inquiry,True
+AUG_00550,What accessories anx cables are included inside the retail product box?,product_inquiry,True
+AUG_00551,is this facial moisturixer vegan ahd cruelty-free fertified?,product_inquiry,True
+AUG_00552,is this facial moisturizer vegan and cruelty-free certified?,product_inquiry,True
+AUG_00553,is this facial moisturizer vegan and cruelty-free certified?,product_inquiry,True
+AUG_00554,is this facizl moisturizer vegan and cruelty-free certified?,product_inquiry,True
+AUG_00555,Will this graphics card fit comfortably insiee a standars Micro-ATX computer case?,product_inquiry,True
+AUG_00556,Will this graphics card fit comfortably inside a standard Micro-ATX computer case?,product_inquiry,True
+AUG_00561,does your APO support GraohQL queries or REST endpoints only?,product_inquiry,True
+AUG_00562,does your API support GraphQL queries or REST endpoints only?,product_inquiry,True
+AUG_00563,does your api support graphql queries or rest endpoints only?,product_inquiry,True
+AUG_00564,does your API support GraphQL queries or REST endpoints onpy?,product_inquiry,True
+AUG_00573,Does the prodict include a user manual in Spanish and French?,product_inquiry,True
+AUG_00574,Does the product inc1ude a user manual in Spanish and French?,product_inquiry,True
+AUG_00575,Does the product include a user manual in Spanish and French?,product_inquiry,True
+AUG_00576,Does the prodsct include a uses manual in Spanish and French?,product_inquiry,True
+AUG_00583,does this smart security camera require a mandatpry monthly clpud subscription to work?,product_inquiry,True
+AUG_00584,does this smart security camera require a mandatory monthly cloud subscription to work?,product_inquiry,True
+AUG_00585,does this smart security camera require a mandatory monthly cloud membership to work?,product_inquiry,True
+AUG_00586,does this smart security camera require a mandatory monthly cloud service to qork?,product_inquiry,True
+AUG_00587,Can this e-bike withstand heavy rainfall and extreme wintdr temperatures?,product_inquiry,True
+AUG_00588,Can this e-bike withstand heavy rainfall and extreme winter temperatures?,product_inquiry,True
+AUG_00589,Can this e-bike withstand heavy rainfall and extreme winter temperatures?,product_inquiry,True
+AUG_00590,Cam this e-bike withstand heavy rainfall and extreme winter tenperatures?,product_inquiry,True
+AUG_00591,What is tne recommended maintenance schedule for this espresso machine?,product_inquiry,True
+AUG_00592,What is the recommended maintenance schedule for this espresso machine?,product_inquiry,True
+AUG_00593,what is the recommended maintenance schedule for this espresso machine?,product_inquiry,True
+AUG_00594,What is the recommended maintenance schedule for this espresso machine?,product_inquiry,True

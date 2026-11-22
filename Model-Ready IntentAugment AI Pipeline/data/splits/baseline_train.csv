@@ -1,0 +1,137 @@
+transcript_id,customer_utterance,intent
+TR_017,my refund status is showing pending for over 10 business days now,refund_request
+TR_013,"The course content was completely outdated, expecting a total refund under your 30-day guarantee.",refund_request
+TR_010,"refund plz, bought wrong item by mistake 10 mins ago",refund_request
+TR_020,Please reimburse the return shipping fee as well since the fault was on your warehouse.,refund_request
+TR_019,"I was overcharged on my monthly bill by $45, need that refunded right away.",refund_request
+TR_007,You guys sent me the wrong color jacket. Give me my money back please.,refund_request
+TR_006,how do i claim a refund for defective electronics item?,refund_request
+TR_011,I am writing to formally request a reimbursement for invoice #INV-7731.,refund_request
+TR_016,"The flight was cancelled by the airline, please issue an immediate refund.",refund_request
+TR_022,"i did not authorize this charge, refund immediately or i will dispute with bank",refund_request
+TR_012,Can you credit the funds back to my original payment card?,refund_request
+TR_018,can i get partial refund if i keep one item from the bundle?,refund_request
+TR_002,"Hey, can i get my money back? The shoes arrived damaged and don't fit at all.",refund_request
+TR_015,"money back please, item never arrived and seller is not responding",refund_request
+TR_023,"Representative told me yesterday I would get a refund, checking on confirmation number.",refund_request
+TR_014,"hey agent, how long does a refund usually take to reflect on Visa?",refund_request
+TR_003,need a refund asap charged twice for the same hoodie,refund_request
+TR_028,Please stop the shipment for order 44102 and cancel it immediately.,cancel_order
+TR_038,Kindly discard order #8841 as I no longer require the items.,cancel_order
+TR_037,"need to void order 11029, my child pressed order button without permission",cancel_order
+TR_033,"Please do not dispatch the package, I wish to terminate this purchase order.",cancel_order
+TR_050,Please drop order #12398 from my queue.,cancel_order
+TR_029,"I want to revoke my order, I found a cheaper alternative elsewhere.",cancel_order
+TR_035,"cancel my order immediately, taking way too long to prepare",cancel_order
+TR_048,"cancel this item right now, do not send it to my office",cancel_order
+TR_043,"Cancel my order please, delivery estimate changed from 2 days to 3 weeks.",cancel_order
+TR_041,Please confirm that order #65219 has been successfully cancelled.,cancel_order
+TR_047,I would appreciate if you could halt and cancel my pending transaction #8172.,cancel_order
+TR_046,"emergency cancel order 50123, card was compromised",cancel_order
+TR_042,i want to cancel one specific item from my basket order without cancelling everything,cancel_order
+TR_040,Why can't I click the cancel button on my order details page?,cancel_order
+TR_027,can u pls cancel my order placed 5 mins ago? ordered wrong address,cancel_order
+TR_045,"terminate order 491823, bought it in a physical store instead",cancel_order
+TR_032,How can I abort the order I submitted this morning?,cancel_order
+TR_073,Why does tracking say 'Address Incomplete' when I entered full street details?,track_shipping
+TR_051,Where is my parcel? The tracking number says delivered but I received nothing.,track_shipping
+TR_059,I haven't received any shipping dispatch notification for order placed 6 days ago.,track_shipping
+TR_074,how many days for standard shipping to Seattle area?,track_shipping
+TR_061,Tracking says delivered to front porch but my CCTV footage shows no courier arrived.,track_shipping
+TR_075,"Tracking status changed to 'Returned to Sender', why was this not delivered?",track_shipping
+TR_056,package is stuck in Memphis transit hub for four consecutive days,track_shipping
+TR_066,Any news on why shipment 77123 has an exception alert?,track_shipping
+TR_064,"package delivery rescheduled without notifying me, what is going on?",track_shipping
+TR_072,"track order 88291, urgently need it before tomorrow morning flight",track_shipping
+TR_065,can i reroute the package to a local pickup point locker?,track_shipping
+TR_054,The tracking link provided in the confirmation email leads to a 404 page.,track_shipping
+TR_067,"delivery boy called and disconnected, where can i track his location?",track_shipping
+TR_055,Could you check the current courier status for shipment #SHP-9182?,track_shipping
+TR_063,customs clearance status update for international package #INTL-88219,track_shipping
+TR_058,where is order #4491? says out for delivery since 8am,track_shipping
+TR_052,Can you give me an update on tracking number FedEx 99281726?,track_shipping
+TR_088,gift card balance shows $50 but checkout says invalid voucher code,payment_issue
+TR_087,How do I update my expired Mastercard on file for upcoming automatic renewal?,payment_issue
+TR_089,payment gateway is throwing a 502 bad gateway error on the submit page,payment_issue
+TR_085,money was deducted from my account but order status says unpaid / pending payment,payment_issue
+TR_095,"Checkout says 'Transaction Not Permitted By Issuer', what should I do?",payment_issue
+TR_090,Can I wire transfer via ACH directly to pay this commercial invoice?,payment_issue
+TR_077,I was charged twice on my American Express card for a single checkout transaction.,payment_issue
+TR_076,My credit card was declined at checkout even though I have sufficient balance.,payment_issue
+TR_091,system keeps rejecting my European debit card with 3D Secure verification,payment_issue
+TR_079,Do you accept PayPal or Apple Pay for recurring subscriptions?,payment_issue
+TR_099,chargeback warning: resolve duplicate debit within 24 hours please,payment_issue
+TR_086,Why did your platform charge a foreign exchange conversion fee?,payment_issue
+TR_080,The promotion discount coupon code is not applying to the final checkout total.,payment_issue
+TR_082,My bank sent an OTP SMS but the checkout screen timed out before I could submit it.,payment_issue
+TR_092,Why is sales tax being charged on a tax-exempt non-profit purchase?,payment_issue
+TR_094,Can I change my default billing payment method without canceling active orders?,payment_issue
+TR_083,can i split payment across two different debit cards?,payment_issue
+TR_110,login page loops back to login without any error message displayed,account_recovery
+TR_108,Need to change my primary login email address from my university email to personal.,account_recovery
+TR_101,I forgot my account password and the reset link email never arrives in my inbox.,account_recovery
+TR_114,"forgot username associated with my order, only have my credit card number",account_recovery
+TR_106,can you unlock my profile please username is john_doe99,account_recovery
+TR_102,"My account is locked due to too many failed login attempts, please unlock.",account_recovery
+TR_118,Please unlink my old Google SSO account and let me set an email and password.,account_recovery
+TR_122,"Help me restore access to my account, all my project files and receipts are in there.",account_recovery
+TR_121,Can you resend the account activation confirmation email?,account_recovery
+TR_117,captcha on the login screen is broken and fails every single attempt,account_recovery
+TR_124,"I have two duplicate accounts registered under slightly different emails, can you merge them?",account_recovery
+TR_120,account blocked message appears every time i connect via home VPN,account_recovery
+TR_112,Can an administrator manually reset my password and send temporary credentials?,account_recovery
+TR_104,How do I regain access to my account if I lost my two-factor authenticator backup codes?,account_recovery
+TR_103,cannot login 2fa code sent to old phone number that i no longer possess,account_recovery
+TR_109,How can I verify my identity to restore access to my deactivated enterprise account?,account_recovery
+TR_105,"I suspect my profile was hacked, someone changed my registered email without my consent.",account_recovery
+TR_150,"Server response latency exceeded 15000ms on production endpoints, please investigate.",technical_support
+TR_133,The latest software patch broke compatibility with our external USB barcode scanner.,technical_support
+TR_135,API webhook calls are failing with SSL handshake timeout errors since this morning.,technical_support
+TR_137,Search bar autocomplete filter is unresponsive and does not show any dropdown results.,technical_support
+TR_144,Is there a workaround for the camera permission denial bug on macOS Sonoma?,technical_support
+TR_147,Real-time collaboration changes are overwriting coworker edits without warning.,technical_support
+TR_132,Push notifications are not coming through on my iPhone even with permissions enabled.,technical_support
+TR_148,"software won't install, throws missing Visual C++ redistributable dependency error",technical_support
+TR_142,Audio output is crackling through Bluetooth headphones during conference calls.,technical_support
+TR_127,Desktop desktop client keeps freezing during audio export rendering on Windows 11.,technical_support
+TR_136,How do I generate and export debug diagnostic log files for your engineering team?,technical_support
+TR_126,The web dashboard crashes with a JavaScript error whenever I open the analytics tab.,technical_support
+TR_141,Database connection pool exhausted error message during peak morning traffic.,technical_support
+TR_149,Keyboard shortcuts like Ctrl+Z and Ctrl+S stopped responding in the latest web build.,technical_support
+TR_134,screen goes completely blank white when clicking the checkout button in Safari,technical_support
+TR_140,dark mode toggle flickers violently and causes high GPU utilization in Chrome browser,technical_support
+TR_143,drag and drop file upload component is not working on Firefox 120,technical_support
+TR_166,"cancel my subscription right now, your service quality has degraded significantly",subscription_management
+TR_155,How many team seats are currently included in our business subscription license?,subscription_management
+TR_152,How do I upgrade our team account from the Basic plan to the Enterprise tier?,subscription_management
+TR_162,Is there a student or non-profit discount available on the annual individual tier?,subscription_management
+TR_158,"downgrade my plan to free tier immediately, no longer using the advanced features",subscription_management
+TR_169,My subscription shows 'past due' status even though my bank confirms payment went through.,subscription_management
+TR_168,how do i turn off automatic recurring billing on the mobile app?,subscription_management
+TR_164,Can I remove 3 unused member seats from our active monthly recurring plan?,subscription_management
+TR_173,"stop charging my credit card every month, I haven't logged in for 6 months",subscription_management
+TR_161,want to reactivate my previously canceled premium plan with my saved settings,subscription_management
+TR_172,Is there any early termination fee for canceling our 1-year contract early?,subscription_management
+TR_174,how do i add extra storage add-on to our existing cloud plan?,subscription_management
+TR_163,free trial ended without notification and charged my credit card full year fee,subscription_management
+TR_170,Will I get prorated credit if I upgrade in the middle of our billing cycle?,subscription_management
+TR_153,"pls stop auto renew for my annual membership, do not want to be charged next month",subscription_management
+TR_157,Can I pause my fitness membership subscription for 2 months while I am traveling abroad?,subscription_management
+TR_160,What happens to all my stored cloud documents if I terminate my paid subscription?,subscription_management
+TR_176,Is this mechanical wireless keyboard compatible with macOS and iPadOS?,product_inquiry
+TR_189,is this facial moisturizer vegan and cruelty-free certified?,product_inquiry
+TR_185,Does your software offer on-premise self-hosted deployment options?,product_inquiry
+TR_187,can this 4K monitor run at 120Hz refresh rate over HDMI 2.1?,product_inquiry
+TR_200,What is the recommended maintenance schedule for this espresso machine?,product_inquiry
+TR_181,is the protective phone case waterproof or only water-resistant?,product_inquiry
+TR_190,Will this graphics card fit comfortably inside a standard Micro-ATX computer case?,product_inquiry
+TR_179,Does the noise-canceling headset come with an international manufacturer warranty?,product_inquiry
+TR_182,Does this smart thermostat work with dual-fuel heat pump HVAC systems?,product_inquiry
+TR_188,What accessories and cables are included inside the retail product box?,product_inquiry
+TR_195,Does the product include a user manual in Spanish and French?,product_inquiry
+TR_198,does this smart security camera require a mandatory monthly cloud subscription to work?,product_inquiry
+TR_184,what materials are used in the upholstery of the ergonomic office chair?,product_inquiry
+TR_199,Can this e-bike withstand heavy rainfall and extreme winter temperatures?,product_inquiry
+TR_186,Are there bulk quantity wholesale discounts available for educational institutions?,product_inquiry
+TR_192,does your API support GraphQL queries or REST endpoints only?,product_inquiry
+TR_180,What is the key functional difference between the Standard and Deluxe editions?,product_inquiry

@@ -1,0 +1,33 @@
+transcript_id,customer_utterance,intent
+TR_024,Could I exchange this or get a store credit refund instead?,refund_request
+TR_005,"Please process a refund for my subscription renewal, I didn't mean to renew it.",refund_request
+TR_025,"total refund required, software licence key was invalid upon delivery",refund_request
+TR_008,"want refund for transaction 99281, service was not provided as promised.",refund_request
+TR_030,Is it too late to cancel order #7712? Status says processing.,cancel_order
+TR_049,"The cancellation window says expired, but order hasn't left the facility yet. Please override and cancel.",cancel_order
+TR_036,Can an agent help me cancel the pre-order for the gaming console?,cancel_order
+TR_039,"stop order delivery, want to cancel right now",cancel_order
+TR_053,when will my package arrive? ordered last wednesday,track_shipping
+TR_057,"Estimated delivery was yesterday 5 PM, what is the new delivery timeframe?",track_shipping
+TR_069,"order status still says processing, when does it actually dispatch?",track_shipping
+TR_062,Is there real-time live map tracking for the local delivery van?,track_shipping
+TR_093,card charged multiple times during system glitch yesterday,payment_issue
+TR_081,unrecognized charge of $89.99 from your company on my bank statement,payment_issue
+TR_078,payment failed error code 4002 when entering cvv number,payment_issue
+TR_096,I want an itemized VAT invoice with my corporate tax identification number.,payment_issue
+TR_115,How do I switch off two-factor authentication so I can log in from my desktop?,account_recovery
+TR_113,"My account has been suspended for security review, how can I appeal this?",account_recovery
+TR_116,"received suspicious login alert from IP in Ukraine, please freeze my account immediately",account_recovery
+TR_125,"account recovery pin not working, please assist via phone verification",account_recovery
+TR_138,printer driver not recognized by software after firmware version 2.4 update,technical_support
+TR_128,getting HTTP 500 internal server error when uploading CSV data files,technical_support
+TR_145,PDF exporter is cutting off the bottom 2 inches of every generated page report.,technical_support
+TR_139,Can you explain why memory usage spikes to 99% when processing batch batches?,technical_support
+TR_154,Can I switch my billing frequency from monthly payments to an annual discounted rate?,subscription_management
+TR_171,terminate recurring charges on account #SUB-9941 effective immediately,subscription_management
+TR_175,Please confirm in writing that my subscription cancellation has been finalized.,subscription_management
+TR_167,Can we pay for an annual subscription via company purchase order instead of credit card?,subscription_management
+TR_193,Are the ceramic cookware pans dishwasher safe and non-toxic PFOA free?,product_inquiry
+TR_196,is there a color swatch sample card I can order before purchasing paint cans?,product_inquiry
+TR_191,What is the estimated battery life during continuous 4K video recording?,product_inquiry
+TR_197,What are the minimum hardware operating system requirements for running version 5?,product_inquiry

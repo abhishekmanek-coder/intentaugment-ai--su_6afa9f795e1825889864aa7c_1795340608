@@ -1,0 +1,60 @@
+{
+  "benchmark_timestamp": "2026-11-22T19:53:52.856419",
+  "dataset_splits": {
+    "train_baseline": 136,
+    "train_augmented_total": 545,
+    "validation": 32,
+    "test_clean": 32,
+    "test_noisy": 32
+  },
+  "evaluation_metrics": {
+    "clean_test_set": {
+      "baseline_accuracy": 0.5938,
+      "baseline_macro_f1": 0.5744,
+      "augmented_accuracy": 0.5625,
+      "augmented_macro_f1": 0.5465
+    },
+    "noisy_test_set": {
+      "baseline_accuracy": 0.3438,
+      "baseline_macro_f1": 0.3298,
+      "augmented_accuracy": 0.375,
+      "augmented_macro_f1": 0.3563,
+      "accuracy_improvement_pct": 3.12,
+      "macro_f1_improvement_pct": 2.65
+    }
+  },
+  "per_class_noisy_breakdown": {
+    "account_recovery": {
+      "baseline_f1": 0.2857,
+      "augmented_f1": 0.2857
+    },
+    "cancel_order": {
+      "baseline_f1": 0.0,
+      "augmented_f1": 0.0
+    },
+    "payment_issue": {
+      "baseline_f1": 0.4,
+      "augmented_f1": 0.5455
+    },
+    "product_inquiry": {
+      "baseline_f1": 0.75,
+      "augmented_f1": 0.75
+    },
+    "refund_request": {
+      "baseline_f1": 0.2857,
+      "augmented_f1": 0.2857
+    },
+    "subscription_management": {
+      "baseline_f1": 0.3333,
+      "augmented_f1": 0.4
+    },
+    "technical_support": {
+      "baseline_f1": 0.3333,
+      "augmented_f1": 0.3333
+    },
+    "track_shipping": {
+      "baseline_f1": 0.25,
+      "augmented_f1": 0.25
+    }
+  }
+}
