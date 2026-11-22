@@ -1,0 +1,105 @@
+{
+  "dataset_overview": {
+    "total_transcripts": 200,
+    "total_intents": 8,
+    "total_tokens": 2420,
+    "vocabulary_size": 982,
+    "type_token_ratio_lexical_diversity": 0.4058
+  },
+  "length_statistics": {
+    "word_count": {
+      "mean": 12.1,
+      "min": 7,
+      "max": 18,
+      "standard_deviation": 2.07
+    },
+    "character_count": {
+      "mean": 72.42,
+      "min": 39,
+      "max": 105
+    }
+  },
+  "intent_distribution": {
+    "refund_request": 25,
+    "cancel_order": 25,
+    "track_shipping": 25,
+    "payment_issue": 25,
+    "account_recovery": 25,
+    "technical_support": 25,
+    "subscription_management": 25,
+    "product_inquiry": 25
+  },
+  "channel_distribution": {
+    "live_chat": 113,
+    "email_support": 57,
+    "voice_stt": 30
+  },
+  "sentiment_distribution": {
+    "neutral": 105,
+    "frustrated": 56,
+    "urgent": 39
+  },
+  "complexity_distribution": {
+    "simple": 78,
+    "compound": 98,
+    "noisy": 24
+  },
+  "top_domain_keywords_per_intent": {
+    "refund_request": [
+      "refund",
+      "get",
+      "back",
+      "item",
+      "request"
+    ],
+    "cancel_order": [
+      "order",
+      "cancel",
+      "want",
+      "now",
+      "need"
+    ],
+    "track_shipping": [
+      "tracking",
+      "delivery",
+      "package",
+      "order",
+      "says"
+    ],
+    "payment_issue": [
+      "card",
+      "checkout",
+      "payment",
+      "code",
+      "debit"
+    ],
+    "account_recovery": [
+      "account",
+      "login",
+      "email",
+      "password",
+      "reset"
+    ],
+    "technical_support": [
+      "error",
+      "when",
+      "during",
+      "software",
+      "web"
+    ],
+    "subscription_management": [
+      "subscription",
+      "our",
+      "billing",
+      "plan",
+      "annual"
+    ],
+    "product_inquiry": [
+      "does",
+      "winter",
+      "standard",
+      "case",
+      "only"
+    ]
+  }
+}
