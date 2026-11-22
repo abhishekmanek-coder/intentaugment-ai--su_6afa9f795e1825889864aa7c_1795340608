@@ -1,0 +1,110 @@
+{
+  "dataset_name": "IntentAugment AI Augmented Support Transcript Corpus",
+  "generated_timestamp": "2026-11-22T19:46:47.075730",
+  "summary": {
+    "original_samples": 200,
+    "augmented_samples_accepted": 594,
+    "total_combined_samples": 794,
+    "expansion_factor": "4.0x",
+    "overall_intent_classes": 8
+  },
+  "semantic_validation_metrics": {
+    "similarity_metric": "Sentence-Transformers Dense Cosine Similarity (all-MiniLM-L6-v2)",
+    "acceptance_window": "[0.80, 0.98]",
+    "mean_similarity": 0.9101,
+    "min_similarity": 0.8213,
+    "max_similarity": 0.9696,
+    "std_deviation": 0.0319,
+    "intent_preservation_accuracy_pct": 100.0
+  },
+  "vocabulary_expansion_metrics": {
+    "baseline_vocabulary_size": 982,
+    "expanded_vocabulary_size": 1480,
+    "new_unique_words_introduced": 498,
+    "vocabulary_growth_percentage": "50.71%"
+  },
+  "length_comparison": {
+    "mean_original_words": 11.89,
+    "mean_augmented_words": 11.89
+  },
+  "strategy_breakdown": {
+    "transformer_paraphrase": {
+      "total_generated": 200,
+      "accepted_count": 0,
+      "acceptance_rate_pct": 0.0,
+      "average_similarity": 0.0
+    },
+    "keyboard_noise": {
+      "total_generated": 200,
+      "accepted_count": 200,
+      "acceptance_rate_pct": 100.0,
+      "average_similarity": 0.9183
+    },
+    "ocr_typo_noise": {
+      "total_generated": 200,
+      "accepted_count": 200,
+      "acceptance_rate_pct": 100.0,
+      "average_similarity": 0.9294
+    },
+    "character_mutation": {
+      "total_generated": 0,
+      "accepted_count": 0,
+      "acceptance_rate_pct": 0.0,
+      "average_similarity": 0.0
+    },
+    "linguistic_synonym": {
+      "total_generated": 200,
+      "accepted_count": 106,
+      "acceptance_rate_pct": 53.0,
+      "average_similarity": 0.8969
+    },
+    "hybrid_paraphrase_noise": {
+      "total_generated": 200,
+      "accepted_count": 88,
+      "acceptance_rate_pct": 44.0,
+      "average_similarity": 0.8637
+    }
+  },
+  "intent_balance_distribution": {
+    "refund_request": {
+      "original_count": 25,
+      "augmented_count": 69,
+      "total_count": 94
+    },
+    "cancel_order": {
+      "original_count": 25,
+      "augmented_count": 54,
+      "total_count": 79
+    },
+    "track_shipping": {
+      "original_count": 25,
+      "augmented_count": 62,
+      "total_count": 87
+    },
+    "payment_issue": {
+      "original_count": 25,
+      "augmented_count": 78,
+      "total_count": 103
+    },
+    "account_recovery": {
+      "original_count": 25,
+      "augmented_count": 69,
+      "total_count": 94
+    },
+    "technical_support": {
+      "original_count": 25,
+      "augmented_count": 91,
+      "total_count": 116
+    },
+    "subscription_management": {
+      "original_count": 25,
+      "augmented_count": 75,
+      "total_count": 100
+    },
+    "product_inquiry": {
+      "original_count": 25,
+      "augmented_count": 96,
+      "total_count": 121
+    }
+  }
+}
